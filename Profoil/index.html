@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Protfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6056aee1df.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("fMdmtUljxyu1L3Nz6");
+        })();
+    </script>
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="img/logo.jpg" class ="logo"> -->
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Experience</a></li>
+                    <li><a href="#protfolio">Protfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I'am <span>Yi Ding</span> <br> from China.</h1>
+            </div>
+        </div>
+    </div>
+<!-- ---------------------about--------------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/yi3.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p> My name is Yi Ding, and I'm currently pursuing a Master's Degree in Computer Software Engineering at Northeastern University. My education and professional background encompass both Computer Science and Applied Math, with hands-on experience in software engineering and big data processing.
+                        I'm deeply interested in a software engineer internship focused on backend development. Given my skills and experience, especially in Python, Java, JavaScript, and C/C++, combined with database management and both frontend and backend frameworks.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages: </span><br>Proficient in Python, Java, JavaScript, and C/C++</li>
+                            <li><span>Database Technologies</span><br>Experienced in SQL, NoSQL, Redis, RethinkDB, and MongoDB.</li>
+                            <li><span>Frontend Development</span><br>Skilled in Bootstrap, Vue.js, React.js, and Backbone.js.</li>
+                            <li><span>Backend Development</span><br>Experienced in Node.js, Express.js, and Django.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2018 ---- Bank of Beijing</span><br>
+                                
+                                <br>●Constructed and refined a large-scale online food ordering platform with over 1,000,000 registered users across 25 regions in China
+                                <br>●Engineered the front-end section of the customer-facing application with React.js provided the ability for customers to add/delete
+                                products according to discount
+                                <br>●Consolidated back-end logics and deployed server routes with Node.js and Express.js, and delivered online Payment Module with
+                                the integration of TLS and Stripe API
+                                <br>●Applied load balance with Linux Virtual Server (LVS) and Nginx to disperse users' requests to a Server cluster, increase daily
+                                activity up to 30,000, the cumulative users are 20,000, and the QPS reaches 200/s
+                                <br>●Integrated Mutex with SETNX in Redis and added in Memcache to reconstruct the system and solve cache penetration and cache
+                                avalanche issues, improved system availability by 200%
+                                </li>
+                            <li><span>2022 ---- Menusifu</span><br>
+                                <br>●Reorganized Hadoop, Kafka, Cassandra, and Storm to develop a lambda architecture that enables real-time big data processing
+                                <br>●Designed and structured SQL statement to query ad update over user data to produce Node.js to implement remote calling of PRC
+                                interfaces supplier cost, reducing the response time of multiple interfaces to less than 1 second
+                                <br>●Utilized Random Forest, Decision Tree, and Neural Network to train a model to help identify customers' qualifications for credit
+                                cards, and used ensemble modeling to help improve the efficiency by 13% and accuracy by 19%
+                                <br>●Formatted pre-heating process of uploaded files with the FTP server to achieve hierarchical CDN(Content Delivery Network) push,
+                                and improve the cache hit ratio by 34%</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017 - 2021</span>
+                                <br> <strong>University of California, Davis</strong>
+                                <br>Bachelor's Degree of Art in Applied Math</li>
+                            <li><span>2022 - 2024</span>
+                                <br> <strong>Northeastern University</strong>
+                                <br>Master's Degree of Science in Computer Software Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ---------------------protfolio--------------------- -->
+<div id="protfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="img/work1.png">
+                <div class="layer">
+                    <h3>Personal Blog</h3>
+                    <p>Web development is the work involved in developing a Web site for the Internet or an intranet.</p>
+                    <a href="https://github.com/AlinaYI/Projects/tree/main/personal_blog"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="img/work1.png">
+                <div class="layer">
+                    <h3>Social App</h3>
+                    <p>Web development is the work involved in developing a Web site for the Internet or an intranet.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="img/work1.png">
+                <div class="layer">
+                    <h3>Media App</h3>
+                    <p>Web development is the work involved in developing a Web site for the Internet or an intranet.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+    </div>
+    <a href="https://github.com/AlinaYI/Projects/tree/main" class="btn">View All on Github</a>
+</div>
+
+<!-- ---------------------Certifications--------------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Certifications</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Web development is the work involved in developing a Web site for the Internet or an intranet.</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <div>
+                <i class="fa-regular fa-face-smile"></i>
+                <h2>App Development</h2>
+                <p>Mobile app development is the act or process by which a mobile app is developed for mobile devices.</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>UI/UX Design</h2>
+                <p>User interface (UI) design is the process designers use to build interfaces in software or computerized devices.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------------contact--------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i> alinayding001@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i> 408-622-0103</p>
+                <div class="social-icons">
+                    <a href="https://github.com/AlinaYI"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yi-ding-b210561a3/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="img/Yi_Ding_resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form id="contact-form">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Created <i class="fa-solid fa-heart"></i>by <span>Yi Ding</span> | &copy; 2023 All rights reserved.</p>
+    </div>
+</div>
+
+<!-- ---------------------scripts--------------------- -->
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-250px";
+    }
+</script>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        console.log('Form submitted');
+        e.preventDefault();
+
+        document.getElementById('msg').innerHTML = 'Sending...';
+
+        emailjs.sendForm('service_sa826gd', 'template_shpznkm', e.target, 'fMdmtUljxyu1L3Nz6')
+            .then(function() {
+                console.log('SUCCESS!');
+                document.getElementById('msg').innerHTML = 'Email successfully sent!';
+            }, function(error) {
+                console.log('FAILED...', error);
+                document.getElementById('msg').innerHTML = 'Failed to send email.';
+            });
+    });
+</script>
+
+
+</body>
+</html>
