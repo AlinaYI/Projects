@@ -1,0 +1,36 @@
+/* Todos.css */
+
+.content {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .todo {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  /* Additional styles for Loading component */
+  .todos__waiting {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Style for the message when there are no todos */
+  .content p {
+    text-align: center;
+    color: #6c757d;
+  }
+  

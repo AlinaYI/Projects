@@ -1,0 +1,53 @@
+/* LoginForm.css */
+
+.login {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login__form label {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .login__form span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .login__username {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+  }
+  
+  .login__button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .login__button:hover {
+    background-color: #0056b3;
+  }
+  
