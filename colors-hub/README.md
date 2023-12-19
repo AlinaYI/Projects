@@ -20,7 +20,6 @@
 ## Instructions To Run The Application
 
 - Clone the repository
-- Run `git checkout final-project` and `cd final/colorshub`
 - Run `npm install` and once that is done run `npm run build`
 - Once the build folder is created, run `npm start` to start the application. The application will be running in `http://localhost:4000/`
 
