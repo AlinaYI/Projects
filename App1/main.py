@@ -1,3 +1,15 @@
+def get_todos(filepath):
+    with open(filepath, 'r') as file_local:
+        todos_local = file_local.readlines()
+    return todos_local
+
+
+# this function is procedure, do not need to return anything
+def write_todos(filepath, todos_arg):
+    with open(filepath, 'w') as file_local:
+        file_local.writelines(todos_arg)
+
+
 while True:
     user_action = input("Type add, show, edit,complete or exit:")
     user_action = user_action.strip()
@@ -5,19 +17,14 @@ while True:
     if user_action.startswith('add'):
         todo = user_action[4:]
 
-        #context manager
-        with open('todos.txt','r') as file:
-            todos = file.readlines()
-
+        todos = get_todos("todos.txt")
         # append new todo into todos
         todos.append(todo + '\n')
+        write_todos("todos.txt", todos)
 
-        with open('todos.txt','w') as file:
-            file.writelines(todos)
     elif user_action.startswith('show'):
 
-        with open('todos.txt', 'r') as file:
-            todos = file.readlines()
+        todos = get_todos("todos.txt")
 
         for idx, item in enumerate(todos):
             item = item.strip('\n')
@@ -31,14 +38,12 @@ while True:
             # index would be start from zero
             number = int(number) - 1
 
-            with open('todos.txt', 'r') as file:
-                todos = file.readlines()
+            todos = get_todos("todos.txt")
 
             new_todo = input("Enter new todo:") + "\n"
             todos[number] = new_todo
+            write_todos("todos.txt", todos)
 
-            with open('todos.txt', 'w') as file:
-                file.writelines(todos)
         except ValueError:
             print("Your command is not valid.")
             continue
@@ -46,16 +51,13 @@ while True:
     # user finish a todo, need to remove one todo
     elif user_action.startswith('complete'):
         try:
-            with open('todos.txt', 'r') as file:
-                todos = file.readlines()
+            todos = get_todos("todos.txt")
 
             number = int(user_action[9:])
             todo_to_remove = todos[number-1].strip('\n')
             todos.pop(number - 1)
 
-
-            with open('todos.txt', 'w') as file:
-                file.writelines(todos)
+            write_todos("todos.txt", todos)
 
             message = f"Todo {todo_to_remove} was removed from the list"
             print(message)
